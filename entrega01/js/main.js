@@ -14,7 +14,7 @@ let deliveryOptions = [
     {
         name: 'entrega1',
         description: 'Retiro en local',
-        availableSla: '1 días hábiles',
+        availableSla: '1 día hábil',
         
     },
     {
