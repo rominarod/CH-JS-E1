@@ -33,11 +33,11 @@ const metodoEntrega = (array) => {
         if (ingresarCp >= 1000 && ingresarCp <= 1500) {
         return 'tu pedido será entregado en ' + array[0].availableSla
       } else if (ingresarCp >= 1501 && ingresarCp <= 2500) {
-        return 'tu pedido será entregado en ' + array[0].availableSla
+        return 'tu pedido será entregado en ' + array[1].availableSla
       } else if (ingresarCp >= 2501 && ingresarCp <= 5000) {
-        return 'tu pedido será entregado en ' + array[0].availableSla
+        return 'tu pedido será entregado en ' + array[2].availableSla
       } else { 
-        alert('No llegamos a entregar en tu zona');
+        return 'No llegamos a entregar en tu zona';
       }
     }
 }
