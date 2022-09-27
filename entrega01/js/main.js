@@ -31,18 +31,16 @@ const metodoEntrega = (array) => {
     let entrega = []
     for (let i = 0; i < array.length; i += 1) {
         if (ingresarCp >= 1000 && ingresarCp <= 1500) {
-        entrega.push(array[0].availableSla)
+        return 'tu pedido será entregado en ' + array[0].availableSla
       } else if (ingresarCp >= 1501 && ingresarCp <= 2500) {
-        entrega.push(array[1].availableSla)
+        return 'tu pedido será entregado en ' + array[0].availableSla
       } else if (ingresarCp >= 2501 && ingresarCp <= 5000) {
-        entrega.push(array[2].availableSla)
+        return 'tu pedido será entregado en ' + array[0].availableSla
       } else { 
         alert('No llegamos a entregar en tu zona');
       }
     }
-    return entrega;
 }
 console.log(metodoEntrega(deliveryOptions));
 
 
-// me falta resolver cómo retornar el método de entrega correspondiente a la condicion planteada en realación al cp ingresado :(
