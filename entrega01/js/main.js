@@ -6,22 +6,22 @@ Como evolutivo de este simualador apruntaré a que se puedan consultar objetos c
 
 let deliveryOptions = [
     {
-        name: 'entrega1',
+        name: 'entrega0',
         description: 'Entrega a Domicilio',
         availableSla: '2 días hábiles',
-        cp: 1500,
+        
+    },
+    {
+        name: 'entrega1',
+        description: 'Retiro en local',
+        availableSla: '1 días hábiles',
+        
     },
     {
         name: 'entrega2',
-        description: 'Retiro en local',
-        availableSla: '1 días hábiles',
-        cp: 2500,
-    },
-    {
-        name: 'entrega3',
         description: 'Retiro en Correo',
         availableSla: '5 días hábiles',
-        cp: 3000,
+        
     }
     
 ]
@@ -29,13 +29,13 @@ let deliveryOptions = [
 let ingresarCp = parseInt(prompt('Ingresa tu código postal'));
 const metodoEntrega = (array) => {
     let entrega = []
-    for (let i = 0; i < array.length; i++) {
-        if (array[i].cp >= 1000 && array[i].cp <= 1500) {
-        entrega.push(array[i])
-      } else if (array[i].cp >= 1501 && array[i].cp <= 2500) {
-        entrega.push(array[i])
-      } else if (array[i].cp >= 2501 && array[i].cp <= 5000) {
-        entrega.push(array[i])
+    for (let i = 0; i < array.length; i += 1) {
+        if (ingresarCp >= 1000 && ingresarCp <= 1500) {
+        entrega.push(array[0].availableSla)
+      } else if (ingresarCp >= 1501 && ingresarCp <= 2500) {
+        entrega.push(array[1].availableSla)
+      } else if (ingresarCp >= 2501 && ingresarCp <= 5000) {
+        entrega.push(array[2].availableSla)
       } else { 
         alert('No llegamos a entregar en tu zona');
       }
