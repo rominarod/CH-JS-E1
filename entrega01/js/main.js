@@ -28,7 +28,6 @@ let deliveryOptions = [
 
 let ingresarCp = parseInt(prompt('Ingresa tu código postal'));
 const metodoEntrega = (array) => {
-    let entrega = []
     for (let i = 0; i < array.length; i += 1) {
         if (ingresarCp >= 1000 && ingresarCp <= 1500) {
         return 'tu pedido será entregado en ' + array[0].availableSla
